@@ -75,7 +75,35 @@
       var circles = s.group(circle1, circle2);
       // var square = s.rect(210,40,160,160);
       var ellipse = s.ellipse(275, 220, 170, 90);
-      
+      var ellipse2 = ellipse.use();
+
+      circles.attr({
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 3,
+        fillOpacity: .6,
+        mask: ellipse
+         
+      });
+      ellipse.attr({
+        fill: '#fff',
+        opacity: .3
+      });
+      ellipse2.attr({
+        fill: '#fff',
+        opacity: .9,
+        stroke: 'black',
+        strokeWidth: 5
+      });
+
+      function blink(){
+        ellipse.animate({ry:1}, 220, function(){
+          ellipse.animate({ry: 90}, 300);
+        });
+      };
+      // Recall blink method once every 3 seconds
+      setInterval(blink, 1000);
+
       // circle1.attr({
       //   fill: 'coral',
       //   stroke: 'coral',
@@ -88,15 +116,7 @@
       //   strokeOpacity: .3,
       //   strokeWidth: 10
       // });
-      circles.attr({
-        fill: 'coral',
-        fillOpacity: .6,
-        mask: ellipse
-      });
-      ellipse.attr({
-        fill: '#fff',
-        opacity: .8
-      });
+      
       
       // square.attr({
       //   fill: 'lightblue',
@@ -105,14 +125,7 @@
       //   strokeWidth: 10
       // });
 
-      function blink(){
-        ellipse.animate({ry:1}, 220, function(){
-          ellipse.animate({ry: 90}, 300);
-        });
-      };
- 
-      // Recall blink method once every 3 seconds
-      setInterval(blink, 3000);
+      
 
     }
   };
