@@ -6,3 +6,51 @@
     }
   }
 }
+
+svg.hover-rectangle {
+  transition: all 1s ease;
+  // .grouped-icons {
+  //   transition: all 1s ease;
+  // }
+  // .grouped-icons:hover {
+  //   x: 100;
+  // }
+  rect {
+    transition: all 1s ease;
+    fill: red;
+  }
+  rect:hover {
+    fill: blue;
+    x: 55;
+  }
+}
+
+.bullhorn-svg {
+  width: 300px;
+  height: 300px;
+}
+
+#bullhorn {
+  transition: all 1s ease;
+  .cls-1, .cls-2 {
+    fill: #fff;
+    opacity: 0.25;
+  }
+  .cls-2 {
+    stroke: #49c8ef;
+    stroke-miterlimit: 10;
+  }
+  #handle, #speaker, #soundwave1, #soundwave2, #body {
+    fill: #d2eef6;
+  }
+}
+
+// #bullhorn:hover {
+//   transform: rotate(360deg);
+// }
+
+
+#squaremultiply {
+  height: 500px;
+  width: 500px;
+}
